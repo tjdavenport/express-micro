@@ -7,4 +7,5 @@
 ## What's Included?
 * cookie auth with passport, in-memory session storage.
 * PostgreSQL + Sequelize db layer
+* Http-focused Mocha testing layer with logs writing to `./tmp`.
 * Tiny, 2 files, one for express app and one for model layer.
