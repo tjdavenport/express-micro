@@ -21,10 +21,10 @@ before('fresh db', async function() {
 });
 
 before('start server and stream logs', function(done) {
-  const logPath = path.join('..', 'tmp', 'test-log.txt');
+  const logPath = path.join('tmp', 'test-log.txt');
   fsx.removeSync(logPath);
   fsx.ensureFileSync(logPath);
-  this.log = fsx.createWriteStream(path.join('tmp', 'test-log.txt'));
+  this.log = fsx.createWriteStream(logPath);
   this.server = childProcess.spawn('node', ['index.js']);
 
   this.server.stdout.pipe(this.log);
